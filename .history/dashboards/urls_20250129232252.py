@@ -7,7 +7,7 @@ urlpatterns = [
     path('categories/add', views.add_categories, name='add_categories'),
     path('categories/edit/<int:pk>', views.edit_categories, name='edit_categories'),
     path('categories/delete/<int:pk>', views.delete_categories, name='delete_categories'),
-    # ckBlog speacial
+    ckBlog spe
         path('posts/add-ckblog/', views.add_ck_posts, name="add_posts"),
             path('posts/blog/<int:post_id>/', views.ckblog_detail, name="edit_posts"),
 
