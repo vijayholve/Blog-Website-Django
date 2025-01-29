@@ -1,0 +1,27 @@
+{% extends '../base/base.html' %}
+
+{% block content %}
+
+
+
+<div class="container">
+  <div class="row">
+    
+  </div>
+    <!-- left sidebar -->
+    {% include './leftsidebar.html' %}
+
+    {% load crispy_forms_tags %}
+
+
+   <div class="col-md-9">
+
+      <form action="" method="POST" style="width: 500px;" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+      </form>
+    </div>
+</div>
+
+{% endblock %}

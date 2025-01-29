@@ -1,0 +1,23 @@
+{% extends '../base/base.html' %}
+
+{% block content %}
+<div class="row">
+    <!-- left sidebar -->
+    {% include './leftsidebar.html' %}
+
+    {% include 'message/error.html' %}
+    {% include 'message/formError.html' %}
+
+    <!-- right sidebar -->
+    <div class="col-md-9">
+        <h3>Add Categories</h3>
+
+      <form action="" method="POST" style="width: 500px;">
+        {% csrf_token %}
+        {{ form  }}
+        <button type="submit" class="btn btn-warning">Submit</button>
+      </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+
+{% extends '../base/base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <!-- Left Sidebar -->
+    <div class="col-md-3">
+        {% include './leftsidebar.html' %}
+    </div>
+
+    {% load crispy_forms_tags %}
+    <!-- Right Content Area -->
+    <div class="col-md-9">
+        <div class="card shadow-sm border-0 p-4">
+            <h3 class="text-center text-primary fw-bold mb-4">Add New Post</h3>
+            <form action="" method="POST" enctype="multipart/form-data" class="mx-auto" style="max-width: 500px;">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form | crispy }}
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
